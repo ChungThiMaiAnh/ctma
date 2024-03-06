@@ -1,0 +1,52 @@
+BT01
+
+A.
+
+1. 
+Lệnh này để xác định xem số nguyên grade có năm trong khoảng [90; 100] không, nhưng code có lỗi cú pháp phải sửa lại thành:
+bool isA = (90 <= grade && grade <= 100);
+
+2. 
+Đoạn chương trình trên in ra: 0
+
+3.
+Tích của hai giá trị int được tính là một giá trị int, sau đó mới được đổi thành một giá trị long. Tuy nhiên 65536 * 65536 = 2^32 là giá trị vượt ra ngoài khả năng lưu trữ của số int 32 bit trước khi nó được đổi ra long, nên dòng thứ 2 sai 
+
+4.
+Biểu thức này có giá trị là true.
+
+5.
+<nộp file cpp>
+
+6. 
+Với dòng code int a = 27 * “three”; thì trình biên dịch báo lỗi kết hợp giữa 2 phần tử int và string là 27 và “three”.
+Nếu chuyển dòng kahi báo x ra ngoài hàm main thì cout ra 0 vì chưa có nhập x vào.
+
+7.
+Ouput:
+0
+0.75
+0.75
+0.75
+
+8.
+Nếu khai báo hai biến cùng tên mà khác kiểu dữ liệu, trình biên dịch báo lỗi xung đột khai báo.
+
+9.
+Ở trường hợp này cout ra: A
+khi ở bên trong khối lệnh con thì arg1 chỉ tới biến arg1 = ‘A’;
+
+10.
+Ở trường hợp này cout: -1
+Khi ở ngoài khối lệnh con thì arg1 chỉ tới biến arg1 = -1;
+
+11.
+Lệnh này chưa ép kiểu, sửa lại thành:
+double C = (F - 32) * (5/(9*1.0));
+
+12.
+Không in ra kết quả gì.
+
+13 - 30.
+<nộp file cpp>
+
