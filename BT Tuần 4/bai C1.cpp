@@ -9,7 +9,7 @@ string timKiem(int N, int a[]) {
         if (daThay[n]) {
             return "Yes";
         }
-        seen[n] = true;
+        daThay[n] = true;
     }
     return "No";
 }
@@ -22,6 +22,5 @@ int main() {
     for (int i = 0; i < N; ++i) {
         cin >> a[i];
     }
-    cout << timKiem(N, arr) << endl;
+    cout << timKiem(N, a) << endl;
 }
-
