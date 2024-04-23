@@ -78,9 +78,6 @@ struct Rect {
 
 
 Bài 6.
-#include <bits/stdc++.h>
-
-using namespace std;
 
 struct Point {
     int x, y;
