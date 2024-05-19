@@ -9,7 +9,6 @@ int main() {
     point.x = 10;
     point.y = 12;
     print(point);
-    return 0;
 }
 
 Bài 2.

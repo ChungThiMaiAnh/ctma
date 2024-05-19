@@ -80,13 +80,13 @@ các xâu kí tự đầu vào, thay vào đó, nó cần cấp phát mảng m�
 cau1.
 char* print(const Point& p) {
     // Cấp phát mảng mới để lưu kết quả
-    char* result = new char[15]; // Đủ lớn để chứa "(x, y)\0"
+    char* result = new char[15]; // Đủ lớn để chứa "(x, y)\0" /// tại sao biết là tầm 15, new là gì
 
     // Format tọa độ và gán vào mảng kết quả
-    sprintf(result, "(%d, %d)", p.x, p.y);
+    sprintf(result, "(%d, %d)", p.x, p.y); /// hàm này dùng trong C++ có ổn không (nó của C mà)
 
     // Trả về địa chỉ của mảng kết quả
-    return result;
+    return result; /// result là kiểu dữ liệu con trỏ kiểu char chữ có ohar chứ có phải chuỗi kí tự đã sắp kia đâu?
 }
 
 cau2.
@@ -94,23 +94,20 @@ cau2.
 
 using namespace std;
 
-// Định nghĩa cấu trúc Point
 struct Point {
     int x, y;
 };
 
-// Hàm thay đổi tọa độ của điểm theo truyền tham trị
-char* changeCoordinatesByValue(const Point p) {
+char* thamtri(const Point p) {
     stringstream ss;
     ss << "(" << p.x << ", " << p.y << ")";
-    string result_str = ss.str();
+    string result_str = ss.str(); ///str là gì?
     char* result = new char[result_str.length() + 1];
     strcpy(result, result_str.c_str());
     return result;
 }
 
-// Hàm thay đổi tọa độ của điểm theo truyền tham biến
-char* changeCoordinatesByReference(const Point& p) {
+char* thambien(const Point& p) {
     stringstream ss;
     ss << "(" << p.x << ", " << p.y << ")";
     string result_str = ss.str();
@@ -122,19 +119,18 @@ char* changeCoordinatesByReference(const Point& p) {
 int main() {
     Point point = {10, 20};
 
-    // Thử nghiệm sự khác nhau giữa truyền tham trị và tham biến
-    char* result1 = changeCoordinatesByValue(point);
-    cout << "Result from changeCoordinatesByValue: " << result1 << endl;
+    char* result1 = thamtri(point);
+    cout << "Kq cua truyen thamtri: " << result1 << endl;
     delete[] result1;
 
-    char* result2 = changeCoordinatesByReference(point);
-    cout << "Result from changeCoordinatesByReference: " << result2 << endl;
+    char* result2 = thambien(point);
+    cout << "Kq cua truyen thambien: " << result2 << endl;
     delete[] result2;
 }
 
 Kết quả:
-Result from changeCoordinatesByValue: (10, 20)
-Result from changeCoordinatesByReference: (10, 20)
+Kq cua truyen thamtri: (10, 20)
+Kq cua truyen thambien: (10, 20)
 
 cau3.
 Point mid_point(const Point& p1, const Point& p2) {
